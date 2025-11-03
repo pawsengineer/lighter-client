@@ -1100,7 +1100,7 @@ fn generate_client_order_id() -> i64 {
     let micros = SystemTime::now()
         .duration_since(UNIX_EPOCH)
         .unwrap_or_default()
-        .as_micros();
+        .as_millis();
     (micros % i64::MAX as u128) as i64
 }
 
